@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Medium.ttf');
+    font-weight: 500;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;  
+    font-size: 18px;
+    -webkit-tap-highlight-color:transparent;
+}
+html, 
+body {
+    background-color: #00000034;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.screen{
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .3s;
+}
+.screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.btn {
+    cursor: pointer;
+    transition: .2s;
+}
+.btn_vr {
+    font-weight: 500;
+    color: #ffffff;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E30613;
+width: 100%;
+max-width: 185px;
+border-radius: 30px;
+letter-spacing: -0.5px;
+margin-top: 27px;
+}
+.btn:active {
+transform: scale(.95);
+}
+.white_bg {
+    background: #ffffff;
+}
+.screen_launch-vr {
+    z-index: 10;
+}
+.logo {
+    width: 100%;
+    height: 47px;
+    max-width: 250px;
+    background: url('./img/Magnit_logo.svg')50% / contain no-repeat;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.logo.visible {
+    opacity: 1;
+}
+.preloader-bar {
+    max-width: 300px;
+    width: 100%;
+    height: 7px;
+    border-radius: 40px;
+    overflow: hidden;
+    background: #000000;
+
+}
+.preloader-bar__line {
+    height: 100%;
+    background: #E30613;
+    border-radius: 40px;
+    transition: .2s;
+}
+.game-info__img {
+    width: 100%;
+    max-width: 217px;
+    height: 217px;
+    background: url('./img/info.png') 50% / contain no-repeat;
+    pointer-events: none;
+}
+.game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.game-info__text {
+    color: #ffffff;
+    width: 100%;
+}
+.game-promo {
+    width: 100%;
+    border-radius: 22px;
+    background: #FFFFFF;
+    padding: 20px;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: start;
+}
+.btn_promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #FF0032;
+    border: 1px solid #FF0032;
+    width: 100%;
+    height: 48px;
+    border-radius: 90px;
+    margin-top: 35px;
+    background: #ff003300;
+}
+.btn_promo::after {
+    width: 24px;
+    height: 24px;
+    content: '';
+    display: block;
+    background: url('./img/copy.svg') 50% / contain no-repeat;
+    transition: .2s;
+}
+.btn_promo.promo-ok {
+    background: #ff003331;
+    pointer-events: none;
+}
+.btn_promo.promo-ok::after {
+    display: none;
+}
+.test-btn {
+    position: fixed;
+    padding: 10px;
+    top: 30px;
+    left: 30px;
+}

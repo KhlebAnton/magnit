@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnit</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="screen white_bg screen_launch-vr">
+        <p>
+            Для использования дополненной реальности требуется доступ к камере вашего устройства
+        </p>
+        <div class="btn btn_vr" onclick="hideLaunchScr()" ontouchstart>Разрешить доступ</div>
+    </div>
+    <div class="screen white_bg screen_preloader">
+        <div class="logo"></div>
+        <div class="preloader-bar">
+            <div class="preloader-bar__line" style="width: 0%;"></div>
+        </div>
+    </div>
+    <div class="screen screen__game hidden">
+        <button class="test-btn" onclick="showPromoScr(), hideGameScr()">scan</button>
+        <div class="game-info">
+            <div class="game-info__img"></div>
+            <div class="game-info__text">Наведите камеру на упаковку</div>
+        </div>
+    </div>
+    <div class="screen screen__promo hidden">
+        <div class="game-promo">
+            <p>Поздравляем с прохождением уровня. Забери свой промокод ниже</p>
+            <div class="btn btn_promo "  onclick="copy(this)" ontouchstart>848DKBN32</div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
